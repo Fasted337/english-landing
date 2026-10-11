@@ -58,7 +58,16 @@ body {
   display: block;
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  padding: 5px 20px;
+}
+.burger {
+  display: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
 }
 .hero {
   padding-top: 120px;
@@ -213,24 +222,50 @@ footer {
   cursor: pointer;
   transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
 }
+.btn a {
+  color: white;
+  text-decoration: none;
+}
 a.btn {
   text-decoration: none;
+  font-size: 1.3em;
 }
 @media (max-width: 768px) {
   .navbar {
     padding: 5px 0;
   }
+  .navbar.open .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 78%;
+    left: 0;
+    width: 100%;
+    background-color: #1e40af;
+  }
   .logo img {
     width: 50px;
   }
   .menu {
-    gap: 5px;
+    display: none;
+    gap: 0;
+    padding: 10px 0;
   }
   .menu li {
-    padding: 3px 8px;
+    padding: 0;
+    border-radius: 0;
+    background: none;
   }
   .menu li a {
-    font-size: 0.9em;
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.3em;
+  }
+  .burger {
+    display: block;
+  }
+  a.btn {
+    margin-left: auto;
   }
   .btn {
     font-size: 0.8em;
